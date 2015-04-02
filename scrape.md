@@ -20,29 +20,34 @@ Now require the OpenURI module by typing:
 ``` ruby
 require 'open-uri'
 ```
-Once both of those are set, use the gem and module
-to grab the information off the url you pass it
-  ``` ruby
-  Nokogiri::HTML(open("https://weworkremotely.com/jobs/search?term=ruby"))
-  ```
+Once both of those are set, we can now use the gem and module
+to grab a webpage that we pass it.  You will need the url of a website to get the information off of it.
+``` ruby
+Nokogiri::HTML(open("https://weworkremotely.com/jobs/search?term=ruby"))
+```
 
-While you're at it set that to a variable so you only need to make the url call one time
-  ``` ruby
-  document = Nokogiri::HTML(open("https://weworkremotely.com/jobs/search?term=ruby"))
-  ```
+That is the url of a website for remote job postings.
+While we are at this step, set that document to a variable so you only need to make the url call one time
+``` ruby
+document = Nokogiri::HTML(open("https://weworkremotely.com/jobs/search?term=ruby"))
+```
 
-Now you have a document with a bunch of Nokogiri elements in it.  Check the class of the document (document.class)
-it should return Nokogiri::HTML::Document
+Now you have a document with a bunch of Nokogiri elements in it.  Check the class of the document
+``` ruby
+document.class
+```
+it should return a Nokogiri::HTML::Document
 
 So we have a Nokogiri HTML document, next step is to navigate through the document to find the specific information we need.
-To do this we will use a language calld XPath, its a pretty simple way to navigate an XML document.  Now, you might be thinking
-we don't have any XML document, only HTML.  Well you are right, just bare with me for a a couple more lines.
+To do this we will use a language calld XPath.  Now, you might be thinking
+we don't have any XML document, only HTML.  Well you are right, we'll fix that in a with the next line of code.
 
-Start by taking the document and pass an XPath onto it.
+Take that document you saved earlier and pass an XPath onto it.
+``` ruby
+document.xpath("//div")
+```
 
-  document.xpath("//div")
-
-Calling ".class" on that should now return Nokogiri::XML::Document.  Sweet, you got some XML.
+Calling ``` ruby .class ``` on that should now return a Nokogiri::XML::Document.  Sweet, you have some XML.
 The "xpath("//div")" is the start to how you will be dropping down into the DOM to whatever place has the information you want.
 
 ---
