@@ -98,13 +98,13 @@ Try going to that url and opening up your inspector.  Walk down the DOM with you
 
 In this case its once your mouse is hovering over the ``` article ``` element.  Go a little further into the ``` article ```, the highlighting should keep getting more narrow, untill you are inside of a single row in the table, then a single element. Those rows contain the information I want for each job. Lets go get them
 
-1.check if you still have the document saved properly from earlier.
+1.Check if you still have the document saved properly from earlier.
 
 ``` ruby
 document = Nokogiri::HTML(open("https://weworkremotely.com/jobs/search?term=ruby"))
 ```
 
-2.use xpath to navigate to to rows of data we want, this will get the whole table of data.
+2.Use xpath to navigate to to rows of data we want, this will get the whole table of data.
 
 ``` ruby
 rows = document.xpath("//div[contains(@class, 'container')]//div[contains(@class, 'content')]
