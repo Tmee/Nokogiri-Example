@@ -32,7 +32,7 @@ The "xpath("//div")" is the start to how you will be dropping down into the DOM 
   * each element can be reached by simply calling the name of it
     * doc.xpath("//div//a//li") will return all the "li" elements inside all the "a" elements
   * when looking for specific elements with an id or class, use contains or position
-      ```
+      ```xpath
       doc.xpath("//div//a//li[contains(@class, "someClassName')]")
       ```
       will return the li with class='someClassName'
@@ -44,6 +44,7 @@ The "xpath("//div")" is the start to how you will be dropping down into the DOM 
       doc.xpath("//div//a//li[position() <= 2]
       ```
       will return the 1st and 2nd "li" inside the "a" element
+
 ---
 
 I found starting from the highest point of the DOM and working down into the nested parts works best.  This might mean you will
