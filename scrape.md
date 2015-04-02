@@ -1,5 +1,7 @@
 # Nokogiri Notes
-### Scraping a website with Nokogiri and XPath - [Just show me scraping](/scrape.md#back-to-scraping-/)
+### Scraping a website with Nokogiri and XPath
+
+* If you're in a rush [Click to just scrape a webpage](/scrape.md#back-to-scraping-/)
 
 
 To setup your environment to use Nokogiri you need to require both the Nokogiri gem and the OpenURI module from ruby.
