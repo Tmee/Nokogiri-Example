@@ -98,25 +98,25 @@ Try going to that url and opening up your inspector.  Walk down the DOM with you
 
 In this case its once your mouse is hovering over the ``` article ``` element.  Go a little further into the ``` article ```, the highlighting should keep getting more narrow, untill you are inside of a single row in the table, then a single element. Those rows contain the information I want for each job. Lets go get them
 
-    #check if you still have the document saved properly from earlier.
+* check if you still have the document saved properly from earlier.
 ``` ruby
 document = Nokogiri::HTML(open("https://weworkremotely.com/jobs/search?term=ruby"))
 ```
 
-    #use xpath to navigate to to rows of data we want, this will get the whole table of data.
+* use xpath to navigate to to rows of data we want, this will get the whole table of data.
 ``` ruby
 rows = document.xpath("//div[contains(@class, 'container')]//div[contains(@class, 'content')]
 //section[contains(@class,'jobs')]//article//ul//li")
 ```
-    #This is the full xpath to get all the rows inside the table with jobs.
-    #Those rows are actually all of the "li" elements inside of the job table
-    #This will return an Nokogiri::XML::NodeSet, basically and array of nodesets
-    #It has a bunch of information you don't care about,
-    #so let's narrow it down to only the title and links
+* This is the full xpath to get all the rows inside the table with jobs.
+* Those rows are actually all of the "li" elements inside of the job table
+* This will return an Nokogiri::XML::NodeSet, basically and array of nodesets
+* It has a bunch of information you don't care about,
+* so let's narrow it down to only the title and links
 
 
-    #This next method will return a array of hashes with the title and link - take a look
-    #and play around with it, I'll explain in more detail below
+* This next method will return a array of hashes with the title and link - take a look
+* and play around with it, I'll explain in more detail below
 
 ``` ruby
 rows.collect do |row|
