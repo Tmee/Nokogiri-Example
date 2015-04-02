@@ -47,7 +47,11 @@ Take that document you saved earlier and pass an XPath onto it.
 document.xpath("//div")
 ```
 
-Calling ``` ruby .class ``` on that should now return a Nokogiri::XML::Document.  Sweet, you have some XML.
+Type typing
+``` ruby
+document.xpath("//div").class
+```
+That should now return a Nokogiri::XML::Document.  Sweet, you have some XML.
 The "xpath("//div")" is the start to how you will be dropping down into the DOM to whatever place has the information you want.
 
 ---
