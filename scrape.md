@@ -3,18 +3,14 @@
 
 * If you're in a rush [skip to example code](/scrape.md#back-to-scraping-/)
 
-
-To setup your environment to use Nokogiri you need to require both the Nokogiri gem and the OpenURI module from ruby.
-Go ahead and start a new pry or irb session in your terminal.
-If you already have Nokogiri installed type:
-
-``` ruby
-require 'nokogiri'
-```
-If you don't have Nokogiri yet type:
-
+Note: if you don't have the Nokogiri gem, first download it locally:
 ``` ruby
 gem install 'nokogiri'
+```
+
+To setup your environment to use Nokogiri you need to require both the Nokogiri gem and the OpenURI module from ruby.
+Go ahead and start a new pry or irb session in your terminal and type:
+``` ruby
 require 'nokogiri'
 ```
 Now require the OpenURI module by typing:
