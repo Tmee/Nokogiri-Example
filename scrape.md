@@ -39,7 +39,7 @@ document.class
 it should return a Nokogiri::HTML::Document
 
 So we have a Nokogiri HTML document, next step is to navigate through the document to find the specific information we need.
-To do this we will use a language calld XPath.  Now, you might be thinking
+To do this we will use a language calld XPath, a language designed to navigate XML documents.  Now, you might be thinking
 we don't have any XML document, only HTML.  Well you are right, we'll fix that in a with the next line of code.
 
 Take that document you saved earlier and pass an XPath onto it.
