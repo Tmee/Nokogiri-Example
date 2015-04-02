@@ -1,4 +1,4 @@
-== Nokogiri Notes
+# Nokogiri Notes
 
 
 To setup your environment to use Nokogiri you need to require both the Nokogiri gem (require 'nokogiri')
