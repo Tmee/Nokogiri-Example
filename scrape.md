@@ -34,7 +34,7 @@ Now you have a document with a bunch of Nokogiri elements in it.  Check the clas
 ``` ruby
 document.class
 ```
-it should return a Nokogiri::HTML::Document
+it should return a ``` Nokogiri::HTML::Document ```
 
 So we have a Nokogiri HTML document, next step is to navigate through the document to find the specific information we need.
 To do this we will use a language calld XPath, a language designed to navigate XML documents.  Now, you might be thinking
