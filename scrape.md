@@ -1,4 +1,5 @@
 # Nokogiri Notes
+### Scraping a website with Nokogiri and XPath
 
 
 To setup your environment to use Nokogiri you need to require both the Nokogiri gem (require 'nokogiri')
