@@ -33,7 +33,7 @@ The "xpath("//div")" is the start to how you will be dropping down into the DOM 
     1.  ```
         doc.xpath("//div//a//li")
         ```
-          + will return all the "li" elements inside all the "a" elements
+      * will return all the "li" elements inside all the "a" elements
 
   * when looking for specific elements with an id or class, use contains or position
 
