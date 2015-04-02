@@ -51,14 +51,14 @@ Now check its class
 ``` ruby
 document.xpath("//div").class
 ```
-That should now return a Nokogiri::XML::Document.  Sweet, you have some XML.
+That should return a Nokogiri::XML::Document.  Sweet, you have some XML.
 The "xpath("//div")" is the start to how you will be dropping down into the DOM to whatever place has the information you want.
 
 ---
 <h4>Some notes on XPath:</h4>
 
 1. it navigates XML documents.
-2.  every HTML element name you add to the xpath string needs to be separated by "//".
+2.  every HTML element name you add to the xpath string needs to be separated by ``` // ```.
 
 3. each element can be reached by simply calling the name of it.
 
