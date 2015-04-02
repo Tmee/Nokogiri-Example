@@ -122,10 +122,10 @@ rows = document.xpath("//div[contains(@class, 'container')]//div[contains(@class
 
 ``` ruby
 rows.collect do |row|
-     {
-:title => row.xpath("a//span[contains(@class, 'title')]").text,
-     :link  => "https://weworkremotely.com#{row.xpath("a").attribute('href').value}"
-     }
+  {
+    :title => row.xpath("a//span[contains(@class, 'title')]").text,
+    :link  => "https://weworkremotely.com#{row.xpath("a").attribute('href').value}"
+  }
 end
 ```
 
