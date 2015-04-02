@@ -116,7 +116,7 @@ rows = document.xpath("//div[contains(@class, 'container')]//div[contains(@class
   * It has a bunch of information you don't care about,
   * so let's narrow it down to only the title and links
 
-3.This next method will return a array of hashes with the title and link
+3.This next method will return a array of hashes with the title and link for each job
   * take a look and play around with it, I'll explain in more detail below
 
 ``` ruby
