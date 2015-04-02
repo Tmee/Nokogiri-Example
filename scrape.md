@@ -27,7 +27,7 @@ The "xpath("//div")" is the start to how you will be dropping down into the DOM 
 
   ---
   <h4>Some notes on XPath:</h4>
-    * it navigates XML documents
+    *it navigates XML documents
     * every HTML element name you add to the xpath string needs to be separated by "//"
     * each element can be reached by simply calling the name of it
       * doc.xpath("//div//a//li") will return all the "li" elements inside all the "a" elements
