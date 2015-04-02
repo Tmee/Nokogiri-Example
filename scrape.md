@@ -111,7 +111,7 @@ rows = document.xpath("//div[contains(@class, 'container')]//div[contains(@class
 //section[contains(@class,'jobs')]//article//ul//li")
 ```
   * This is the full xpath to get all the rows inside the table with jobs.
-  * Those rows are actually all of the "li" elements inside of the job table
+  * Those rows are actually all of the ``` li ``` elements inside of the job table
   * This will return an Nokogiri::XML::NodeSet, basically and array of nodesets
   * It has a bunch of information you don't care about,
   * so let's narrow it down to only the title and links
