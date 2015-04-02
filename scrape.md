@@ -102,19 +102,16 @@ In this case its once your mouse is hovering over the ``` article ``` element.  
 ``` ruby
 document = Nokogiri::HTML(open("https://weworkremotely.com/jobs/search?term=ruby"))
 ```
-
 2. use xpath to navigate to to rows of data we want, this will get the whole table of data.
 ``` ruby
 rows = document.xpath("//div[contains(@class, 'container')]//div[contains(@class, 'content')]
 //section[contains(@class,'jobs')]//article//ul//li")
 ```
-* This is the full xpath to get all the rows inside the table with jobs.
-* Those rows are actually all of the "li" elements inside of the job table
-* This will return an Nokogiri::XML::NodeSet, basically and array of nodesets
-* It has a bunch of information you don't care about,
-* so let's narrow it down to only the title and links
-
-
+  * This is the full xpath to get all the rows inside the table with jobs.
+  * Those rows are actually all of the "li" elements inside of the job table
+  * This will return an Nokogiri::XML::NodeSet, basically and array of nodesets
+  * It has a bunch of information you don't care about,
+  * so let's narrow it down to only the title and links
 3. This next method will return a array of hashes with the title and link
   * take a look and play around with it, I'll explain in more detail below
 ``` ruby
@@ -126,17 +123,17 @@ rows.collect do |row|
 end
 ```
 
-* Try putting a ``` binding.pry ``` under the ``` rows.collect ```, what is ``` row.class ```?
-* The row is still a ``` Nokogiri::XML::Document ```, which means we can still call xpath on it - Oh the joy.
-* The starting syntax changes a bit if you looked closely at the xpath on the doc and on the row notice
-  - There are no ``` // ``` before the first element's name on the xpath for the row
-  - Other than that, it is the same idea of walking down the DOM to find elements with the information you want.
-* The methods that are called after the last ``` ) ``` in the xpath are Nokogiri methods.
-* There are a bunch of them; ``` .text ```, ``` .attribute ``` and ``` .value ``` are what I have found I use the most.
-* They pretty much explain themselves
-  - ``` .text ``` returns the string of text inside of the ``` Nokogiri::XML::Nodeset ```
-  - ``` .attribute() ``` will return the ``` Nokogiri::XML::Nodeset ``` of the attribute
-  - ``` .value ``` will return the value of the attribute.
+  * Try putting a ``` binding.pry ``` under the ``` rows.collect ```, what is ``` row.class ```?
+  * The row is still a ``` Nokogiri::XML::Document ```, which means we can still call xpath on it - Oh the joy.
+  * The starting syntax changes a bit if you looked closely at the xpath on the doc and on the row notice
+    - There are no ``` // ``` before the first element's name on the xpath for the row
+    - Other than that, it is the same idea of walking down the DOM to find elements with the information you want.
+  * The methods that are called after the last ``` ) ``` in the xpath are Nokogiri methods.
+  * There are a bunch of them; ``` .text ```, ``` .attribute ``` and ``` .value ``` are what I have found I use the most.
+  * They pretty much explain themselves
+    - ``` .text ``` returns the string of text inside of the ``` Nokogiri::XML::Nodeset ```
+    - ``` .attribute() ``` will return the ``` Nokogiri::XML::Nodeset ``` of the attribute
+    - ``` .value ``` will return the value of the attribute.
 
-* That's it, the collection returned from the last function will be an array of hashes containing the title and link of the job posting on weworkremotely.com
-* As always, please use Nokogiri responsibly
+  * That's it, the collection returned from the last function will be an array of hashes containing the title and link of the job posting on weworkremotely.com
+  * As always, please use Nokogiri responsibly
