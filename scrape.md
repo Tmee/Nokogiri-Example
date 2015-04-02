@@ -2,7 +2,16 @@
 ### Scraping a website with Nokogiri and XPath
 
 
-To setup your environment to use Nokogiri you need to require both the Nokogiri gem (require 'nokogiri')
+
+To setup your environment to use Nokogiri you need to require both the Nokogiri gem, if you already have the gem installed type:
+    ```ruby
+    require 'nokogiri'
+    ```
+If you don't have the gem yet type:
+    ```ruby
+    gem install 'nokogiri'
+    require 'nokogiri'
+    ```
 and the OpenURI module from ruby (require 'open-uri').  Once both of those are set, use the gem and module
 to grab the information off the url you pass it
 
