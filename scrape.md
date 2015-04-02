@@ -77,12 +77,12 @@ The ``` xpath("//div") ``` is the start to how you will be dropping down into th
     ```
     document.xpath("//div//a//li[contains(@id, "someIDName')]")
     ```
-      * will return the ``` li ``` with ``` class='someIDName' ```
+      * will return the ``` li ``` with ``` id='someIDName' ```
 
     ```
     document.xpath("//div//a//li[position() <= 2]
     ```
-      * will return the 1st and 2nd "li" inside the "a" element
+      * will return the 1st and 2nd ``` li ``` inside the every ``` a ``` element
 
 ---
 
