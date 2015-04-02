@@ -1,9 +1,6 @@
 # Nokogiri Notes
 ### Scraping a website with Nokogiri and XPath
 
-``` ruby
-require 'nokogiri'
-```
 
 To setup your environment to use Nokogiri you need to require both the Nokogiri gem, if you already have the gem installed type:
     ``` ruby
