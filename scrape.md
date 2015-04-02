@@ -52,7 +52,7 @@ Now check its class
 document.xpath("//div").class
 ```
 That should return a Nokogiri::XML::Document.  Sweet, you have some XML.
-The "xpath("//div")" is the start to how you will be dropping down into the DOM to whatever place has the information you want.
+The ``` xpath("//div") ``` is the start to how you will be dropping down into the DOM to whatever place has the information you want.
 
 ---
 <h4>Some notes on XPath:</h4>
@@ -72,12 +72,12 @@ The "xpath("//div")" is the start to how you will be dropping down into the DOM 
     ```
     document.xpath("//div//a//li[contains(@class, "someClassName')]")
     ```
-      * will return the li with class='someClassName'
+      * will return the ``` li ``` with ``` class='someClassName' ```
 
     ```
     document.xpath("//div//a//li[contains(@id, "someIDName')]")
     ```
-      * will return the li with class='someIDName'
+      * will return the ``` li ``` with ``` class='someIDName' ```
 
     ```
     document.xpath("//div//a//li[position() <= 2]
