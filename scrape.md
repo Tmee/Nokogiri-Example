@@ -47,7 +47,7 @@ Take that document you saved earlier and pass an XPath onto it.
 document.xpath("//div")
 ```
 
-Type typing
+Now check its class
 ``` ruby
 document.xpath("//div").class
 ```
