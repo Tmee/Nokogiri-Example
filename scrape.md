@@ -104,7 +104,7 @@ In this case its once your mouse is hovering over the ``` article ``` element.  
 document = Nokogiri::HTML(open("https://weworkremotely.com/jobs/search?term=ruby"))
 ```
 
-2.Use xpath to navigate to to rows of data we want, this will get the whole table of data.
+2.Use XPath to navigate to the rows of data we want, the following code   will get the whole table of data.
 
 ``` ruby
 rows = document.xpath("//div[contains(@class, 'container')]//div[contains(@class, 'content')]
