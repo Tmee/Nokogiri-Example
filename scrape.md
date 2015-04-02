@@ -93,26 +93,23 @@ end up with an enormous xpath string, but its cool... you can always clean up th
 specific you are the better chance of getting the correct information, until the site you are scraping changes.
 
 
-So let's scrape some HTML (continuing from the top section)
-I took a website, weworkremotely.com, and ran a search for "ruby".  This returned the url "https://weworkremotely.com/job
-s/search?term=ruby".  We'll be using this as our main document where all our information lies.  Looking at the webpage I can
-see that the info I want, job titles and links, are all located inside a table in the middle of the page.  Try going to that
-url and opening up your inspector.  Walk down the DOM with your mouse, try to open up the different elements and see what gets
-highlighted on the screen.  Keep poking around until that highlighted section is only over the table containing all the jobs.
-In this case its once your mouse is hovering over the "article" element.  Go a little further into the article, the
-highlighting should keep getting more narrow, untill you are inside of a single row in the table, then a single element.
-Those rows contain the information I want for each job. Lets go get them
+So, let's scrape some HTML (continuing from the top section)
+I took a website, weworkremotely.com, and ran a search for "ruby".  This returned the url ``` https://weworkremotely.com/jobs/search?term=ruby ```.  We'll be using this as our main document where all our information lies.  Looking at the webpage I can see that the info I want, job titles and links, are all located inside a table in the middle of the page.
+
+Try going to that url and opening up your inspector.  Walk down the DOM with your mouse, try to open up the different elements and see what gets highlighted on the screen.  Keep poking around until that highlighted section is only over the table containing all the jobs.
+
+In this case its once your mouse is hovering over the ``` article ``` element.  Go a little further into the ``` article ```, the highlighting should keep getting more narrow, untill you are inside of a single row in the table, then a single element. Those rows contain the information I want for each job. Lets go get them
 
     #use Nokogiri and openURI to get the html document, set that to a variable.
-  '''ruby
-  doc  = Nokogiri::HTML(open("https://weworkremotely.com/jobs/search?term=ruby"))
-  '''
+``` ruby
+doc  = Nokogiri::HTML(open("https://weworkremotely.com/jobs/search?term=ruby"))
+```
 
     #go get the rows of data
-  '''ruby
-  rows = doc.xpath("//div[contains(@class, 'container')]//div[contains(@class, 'content')]
-  //section[contains(@class,'jobs')]//article//ul//li")
-  '''
+``` ruby
+rows = doc.xpath("//div[contains(@class, 'container')]//div[contains(@class, 'content')]
+//section[contains(@class,'jobs')]//article//ul//li")
+```
     #This is the full xpath to get all the rows inside the table with jobs.
     #Those rows are actually all of the "li" elements inside of the job table
     #This will return an Nokogiri::XML::NodeSet, basically and array of nodesets
@@ -122,14 +119,14 @@ Those rows contain the information I want for each job. Lets go get them
 
     #This next method will return a array of hashes with the title and link - take a look
     #and play around with it, I'll explain in more detail below
-  '''ruby
-      rows.collect do |row|
-           {
-     :title => row.xpath("a//span[contains(@class, 'title')]").text,
-           :link  => "https://weworkremotely.com#{row.xpath("a").attribute('href').value}"
-           }
-      end
-      '''
+``` ruby
+  rows.collect do |row|
+       {
+ :title => row.xpath("a//span[contains(@class, 'title')]").text,
+       :link  => "https://weworkremotely.com#{row.xpath("a").attribute('href').value}"
+       }
+  end
+```
         #Try putting a binding.pry under the rows.collect, what is row.class?
         #The row is still a Nokogiri::XML::Document, which means we can still call xpath on it
         #Oh the joy.
