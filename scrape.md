@@ -15,6 +15,11 @@ If you don't have the gem yet type:
     require 'nokogiri'
     ```
 
+``` ruby
+def index
+puts "hello world"
+end
+```
 and the OpenURI module from ruby (require 'open-uri').  Once both of those are set, use the gem and module
 to grab the information off the url you pass it
 
