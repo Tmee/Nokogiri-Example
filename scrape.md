@@ -132,8 +132,8 @@ end
 * Try putting a ``` binding.pry ``` under the ``` rows.collect ```, what is ``` row.class ```?
 * The row is still a ``` Nokogiri::XML::Document ```, which means we can still call xpath on it - Oh the joy.
 * The starting syntax changes a bit if you looked closely at the xpath on the doc and on the row notice
-  + There are no ``` // ``` before the first element's name on the xpath for the row
-* Other than that, it is the same idea of walking down the DOM to find elements with the information you want.
+  - There are no ``` // ``` before the first element's name on the xpath for the row
+  - Other than that, it is the same idea of walking down the DOM to find elements with the information you want.
 * The methods that are called after the last ``` ) ``` in the xpath are Nokogiri methods.
 * There are a bunch of them; ``` .text ```, ``` .attribute ``` and ``` .value ``` are what I have found I use the most.
 * They pretty much explain themselves
