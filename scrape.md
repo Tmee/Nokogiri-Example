@@ -4,21 +4,15 @@
 
 To setup your environment to use Nokogiri you need to require both the Nokogiri gem, if you already have the gem installed type
 
-    ``` ruby
-    require 'nokogiri'
-    ```
+``` ruby
+require 'nokogiri'
+```
 
 If you don't have the gem yet type:
 
-    ``` ruby
-    gem install 'nokogiri'
-    require 'nokogiri'
-    ```
-
 ``` ruby
-def index
-puts "hello world"
-end
+gem install 'nokogiri'
+require 'nokogiri'
 ```
 and the OpenURI module from ruby (require 'open-uri').  Once both of those are set, use the gem and module
 to grab the information off the url you pass it
