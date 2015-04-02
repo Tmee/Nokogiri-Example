@@ -63,24 +63,24 @@ The "xpath("//div")" is the start to how you will be dropping down into the DOM 
 3. each element can be reached by simply calling the name of it.
 
     ```
-    doc.xpath("//div//a//li")
+    document.xpath("//div//a//li")
     ```
       * will return all the "li" elements inside all the "a" elements
 
 4. when looking for specific elements with an id or class, use contains or position.
 
     ```
-    doc.xpath("//div//a//li[contains(@class, "someClassName')]")
+    document.xpath("//div//a//li[contains(@class, "someClassName')]")
     ```
       * will return the li with class='someClassName'
 
     ```
-    doc.xpath("//div//a//li[contains(@id, "someIDName')]")
+    document.xpath("//div//a//li[contains(@id, "someIDName')]")
     ```
       * will return the li with class='someIDName'
 
     ```
-    doc.xpath("//div//a//li[position() <= 2]
+    document.xpath("//div//a//li[position() <= 2]
     ```
       * will return the 1st and 2nd "li" inside the "a" element
 
