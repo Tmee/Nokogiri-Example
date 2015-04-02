@@ -137,10 +137,9 @@ end
 * The methods that are called after the last ``` ) ``` in the xpath are Nokogiri methods.
 * There are a bunch of them; ``` .text ```, ``` .attribute ``` and ``` .value ``` are what I have found I use the most.
 * They pretty much explain themselves
-  - ``` .text ``` returns the string of text if any inside of the ``` Nokogiri::XML::Nodeset ```
+  - ``` .text ``` returns the string of text inside of the ``` Nokogiri::XML::Nodeset ```
   - ``` .attribute() ``` will return the ``` Nokogiri::XML::Nodeset ``` of the attribute
   - ``` .value ``` will return the value of the attribute.
 
-* Thats it, the collection returned from the last rows function will be an array of hashes containing the title
-* and link of the job posting on weworkremotely.com
+* That's it, the collection returned from the last function will be an array of hashes containing the title and link of the job posting on weworkremotely.com
 * As always, please use Nokogiri responsibly
