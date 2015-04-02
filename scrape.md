@@ -25,6 +25,9 @@ Start by taking the document and pass an XPath onto it.
 Calling ".class" on that should now return Nokogiri::XML::Document.  Sweet, you got some XML.
 The "xpath("//div")" is the start to how you will be dropping down into the DOM to whatever place has the information you want.
 
+* uses Mandrill for smtp email
+* Foundation as css framework
+
   ---
   <h4>Some notes on XPath:</h4>
     * it navigates XML documents
@@ -45,11 +48,6 @@ The "xpath("//div")" is the start to how you will be dropping down into the DOM 
         ```
         will return the 1st and 2nd "li" inside the "a" element
   ---
-
-  ```javascript
-  var s = "JavaScript syntax highlighting";
-  alert(s);
-  ```
 
 I found starting from the highest point of the DOM and working down into the nested parts works best.  This might mean you will
 end up with an enormous xpath string, but its cool... you can always clean up the code later if you're feel crazy.  The more
