@@ -2,26 +2,34 @@
 ### Scraping a website with Nokogiri and XPath
 
 
-To setup your environment to use Nokogiri you need to require both the Nokogiri gem, if you already have the gem installed type
+To setup your environment to use Nokogiri you need to require both the Nokogiri gem and the OpenURI module from ruby.
+Go ahead and start a new pry or irb session in your terminal.
+If you already have Nokogiri installed type:
 
 ``` ruby
 require 'nokogiri'
 ```
-
-If you don't have the gem yet type:
+If you don't have Nokogiri yet type:
 
 ``` ruby
 gem install 'nokogiri'
 require 'nokogiri'
 ```
-and the OpenURI module from ruby (require 'open-uri').  Once both of those are set, use the gem and module
-to grab the information off the url you pass it
+Now require the OpenURI module by typing:
 
+``` ruby
+require 'open-uri'
+```
+Once both of those are set, use the gem and module
+to grab the information off the url you pass it
+  ``` ruby
   Nokogiri::HTML(open("https://weworkremotely.com/jobs/search?term=ruby"))
+  ```
 
 While you're at it set that to a variable so you only need to make the url call one time
-
+  ``` ruby
   document = Nokogiri::HTML(open("https://weworkremotely.com/jobs/search?term=ruby"))
+  ```
 
 Now you have a document with a bunch of Nokogiri elements in it.  Check the class of the document (document.class)
 it should return Nokogiri::HTML::Document
