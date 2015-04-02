@@ -26,18 +26,18 @@ Calling ".class" on that should now return Nokogiri::XML::Document.  Sweet, you 
 The "xpath("//div")" is the start to how you will be dropping down into the DOM to whatever place has the information you want.
 
   ---
-  Some notes on XPath
-    * it navigates XML documents
-    * every HTML element name you add to the xpath string needs to be separated by "//"
-    * each element can be reached by simply calling the name of it
-      * doc.xpath("//div//a//li") will return all the "li" elements inside all the "a" elements
-    * when looking for specific elements with an id or class, use contains or position
-      * doc.xpath("//div//a//li[contains(@class, "someClassName')]")
-        will return the li with class='someClassName'
-      * doc.xpath("//div//a//li[contains(@id, "someIDName')]")
-        will return the li with class='someIDName'
-      * doc.xpath("//div//a//li[position() <= 2]
-        will return the 1st and 2nd "li" inside the "a" element
+..Some notes on XPath
+....* it navigates XML documents
+....* every HTML element name you add to the xpath string needs to be separated by "//"
+....* each element can be reached by simply calling the name of it
+......* doc.xpath("//div//a//li") will return all the "li" elements inside all the "a" elements
+....* when looking for specific elements with an id or class, use contains or position
+......* doc.xpath("//div//a//li[contains(@class, "someClassName')]")
+........will return the li with class='someClassName'
+......* doc.xpath("//div//a//li[contains(@id, "someIDName')]")
+........will return the li with class='someIDName'
+......* doc.xpath("//div//a//li[position() <= 2]
+........will return the 1st and 2nd "li" inside the "a" element
 
   ---
 
