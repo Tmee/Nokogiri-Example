@@ -51,6 +51,34 @@ The "xpath("//div")" is the start to how you will be dropping down into the DOM 
 
 ---
 
+1. Lists in a list item:
+    - Indented four spaces.
+        * indented eight spaces.
+    - Four spaces again.
+2.  Multiple paragraphs in a list items:
+    It's best to indent the paragraphs four spaces
+    You can get away with three, but it can get
+    confusing when you nest other things.
+    Stick to four.
+
+    We indented the first line an extra space to align
+    it with these paragraphs. In real use, we might do
+    that to the entire list so that all items line up.
+
+    This paragraph is still part of the list item, but it looks messy to humans. So it's a good idea to wrap your nested paragraphs manually, as we did with the first two.
+
+3. Blockquotes in a list item:
+
+    > Skip a line and
+    > indent the >'s four spaces.
+
+4. Preformatted text in a list item:
+
+        Skip a line and indent eight spaces.
+        That's four spaces for the list
+        and four to trigger the code block.
+
+
 I found starting from the highest point of the DOM and working down into the nested parts works best.  This might mean you will
 end up with an enormous xpath string, but its cool... you can always clean up the code later if you're feel crazy.  The more
 specific you are the better chance of getting the correct information, until the site you are scraping changes.
