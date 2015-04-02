@@ -42,6 +42,11 @@ The "xpath("//div")" is the start to how you will be dropping down into the DOM 
         will return the 1st and 2nd "li" inside the "a" element
   ---
 
+  ```javascript
+  var s = "JavaScript syntax highlighting";
+  alert(s);
+  ```
+
 I found starting from the highest point of the DOM and working down into the nested parts works best.  This might mean you will
 end up with an enormous xpath string, but its cool... you can always clean up the code later if you're feel crazy.  The more
 specific you are the better chance of getting the correct information, until the site you are scraping changes.
