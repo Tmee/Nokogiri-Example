@@ -140,5 +140,5 @@ end
     - ``` .attribute() ``` will return the ``` Nokogiri::XML::Nodeset ``` of the attribute
     - ``` .value ``` will return the value of the attribute.
 
-  * That's it, the collection returned from the last function will be an array of hashes containing the title and link of the job posting on weworkremotely.com
+  * That's it, those three pieces of code will return an array of hashes containing the title and link of the job postings on weworkremotely.com
   * As always, please use Nokogiri responsibly
