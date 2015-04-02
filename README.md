@@ -1,5 +1,4 @@
 # Nokogiri-Example
-example on scraping a webpage
 
 - This is a walkthrough on scraping a webpage.
 - This example takes a job posting website and scrapes the job titles and posting links.
