@@ -133,7 +133,7 @@ end
   * The starting syntax changes a bit if you looked closely at the xpath on the doc and on the row notice
     - There are no ``` // ``` before the first element's name on the xpath for the row
     - Other than that, it is the same idea of walking down the DOM to find elements with the information you want.
-  * The methods that are called after the last ``` ) ``` in the xpath are XPath methods.
+  * The methods that are called after the last ``` ) ``` in the xpath are Nokogiri methods.
   * There are a bunch of them; ``` .text ```, ``` .attribute ``` and ``` .value ``` are what I have found I use the most.
   * They pretty much explain themselves
     - ``` .text ``` returns the string of text inside of the ``` Nokogiri::XML::Nodeset ```
