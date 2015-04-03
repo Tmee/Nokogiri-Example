@@ -1,7 +1,7 @@
 # Nokogiri Notes
 ### Scraping a website with Nokogiri and XPath
 
-* If you're in a rush [skip to example code](/scrape.md#back-to-scraping-/)
+* If you're in a rush [skip to example code](/README.md#back-to-scraping-/)
 
 Note: if you don't have the Nokogiri gem, first download it locally:
 ``` ruby
