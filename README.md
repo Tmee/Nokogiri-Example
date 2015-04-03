@@ -142,3 +142,6 @@ end
 
   * That's it, those three pieces of code will return an array of hashes containing the title and link of the job postings on weworkremotely.com
   * As always, please use Nokogiri responsibly
+ 
+[XPath examples](/https://msdn.microsoft.com/en-us/library/ms256086%28v=vs.110%29.aspx/)
+
