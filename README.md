@@ -49,7 +49,7 @@ Now check its class
 ``` ruby
 document.xpath("//div").class
 ```
-That should return a Nokogiri::XML::Document.  Sweet, you have some XML.
+That should return a ``` Nokogiri::XML::Document ```.  Sweet, you have some XML.
 The ``` xpath("//div") ``` is the start to how you will be dropping down into the DOM to whatever place has the information you want.
 
 ---
